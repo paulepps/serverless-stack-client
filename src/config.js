@@ -1,4 +1,6 @@
 export default {
+    MAX_ATTACHMENT_SIZE: 5000000,
+    STRIPE_KEY: "pk_test_51H2QNlJqdiwdYo5w80EVPQmV0uZRSuzMhDDriU75shXvF5l9swuJZOxpdGOHBeBtoNDFerTvxSzhQZPM43KDP9gD00yt5S8DH5",
     s3: {
         REGION: "us-east-1",
         BUCKET: "paul-epps-notes-app-uploads"
