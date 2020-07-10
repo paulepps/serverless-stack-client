@@ -14,5 +14,8 @@ export default {
         USER_POOL_ID: "us-east-1_djX0jnfTR",
         APP_CLIENT_ID: "4s7r9o2ncop8m7sbkem9tnqbap",
         IDENTITY_POOL_ID: "us-east-1:d2e00964-f435-4466-b2ca-f82a50494a31"
+    },
+    social: {
+        FB: "697289960839972"
     }
 };

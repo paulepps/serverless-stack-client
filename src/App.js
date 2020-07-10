@@ -6,6 +6,7 @@ import Routes from "./Routes";
 import { LinkContainer } from "react-router-bootstrap";
 import { AppContext } from "./libs/contextLib";
 import { Auth } from "aws-amplify";
+import config from "./config";
 
 function App() {
 
@@ -18,7 +19,30 @@ function App() {
     onLoad();
   }, []);
 
+  const loadFacebookSDK = () => {
+    window.fbAsyncInit = function() {
+      window.FB.init({
+        appId            : config.social.FB,
+        // autoLogAppEvents : true,
+        cookie           : true,
+        xfbml            : true,
+        version          : 'v7.0'
+      });
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); 
+       js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  }
+
   async function onLoad() {
+    loadFacebookSDK();
+
     try {
       await Auth.currentSession();
       userHasAuthenticated(true);
