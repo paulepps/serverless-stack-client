@@ -13,7 +13,7 @@ A simple note taking app called Scratch. It is a single page application powered
 * The backend APIs need to be secure
 * The app needs to be responsive
 
-The app is deployed on the AWS Platform at http://d3g6zqtqi2lne3.cloudfront.net/
+The app is deployed on the AWS Platform at https://d2opjbmp4la1am.cloudfront.net/
 
 ## TECHNOLOGY SUMMARY
 
